@@ -1,0 +1,16 @@
+---
+version: "2"
+plugins:
+  eslint:
+    enabled: true
+checks:
+	method-complexity:
+		enabled: false
+	similar-code:
+    	enabled: false
+	method-lines:
+    	config:
+      		threshold: 35
+exclude_patterns:
+  - "**/node_modules/"
+  - "**/.github/"

@@ -1,0 +1,4 @@
+# Manage Site Redirects
+
+# Redirect default Netlify subdomain to primary domain
+http://creativefuse.netlify.com/* https://build.creativefuse.io/:splat 301!
