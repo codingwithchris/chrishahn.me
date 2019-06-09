@@ -1,6 +1,6 @@
 import React from "react"
 
-import { TemplateWrapper } from "../components"
+import { Heading, TemplateWrapper } from "../components"
 import { SEO } from "../components"
 
 const HomePage = () => (
@@ -9,7 +9,7 @@ const HomePage = () => (
 
 		<SEO title="Chris Hahn • Storyteller|Dreamer" description="" keywords={[`gatsby`, `application`, `react`]} />
 
-    	<h1>Hi people</h1>
+    	<Heading tag="h1" weight="bold" size="xl" color="dark">My New Site is Coming Soon :)</Heading>
 
 	</TemplateWrapper>
 
