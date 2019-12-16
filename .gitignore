@@ -57,9 +57,9 @@ typings/
 .env.production
 .env.staging
 
-# gatsby files
+# build files
 .cache/
-public
+dist
 
 # Mac files
 .DS_Store

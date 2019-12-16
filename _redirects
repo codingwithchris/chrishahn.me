@@ -1,4 +1,0 @@
-# Manage Site Redirects
-
-# Redirect default Netlify subdomain to primary domain
-https://chrishahn.netlify.com/* https://chrishahn.me/:splat 301!
