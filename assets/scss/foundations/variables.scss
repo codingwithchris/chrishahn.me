@@ -1,2 +1,39 @@
+
+// Quickly retrieve a CSS variable
+@function v($var) {
+	@return var(--#{$var});
+}
+
 :root{
+
+	// Set up Color Palette
+	--black: #303030;
+	--white: #FFFFFF;
+
+	// Typography
+	--baseFontSize: 17px;
+
+	// Set up simple spacing scale
+	--spacing-xs: 8px;
+	--spacing-s: 12px;
+	--spacing-m: 16px;
+	--spacing-l: 24px;
+	--spacing-xl: 32px;
+
+	--layout-spacing-xs: 48px;
+	--layout-spacing-s: 64px;
+	--layout-spacing-m: 96px;
+	--layout-spacing-l: 160px;
+	--layout-spacing-xl: 224px;
+
+	// Box shadow gives the illusion of elevation
+	--elevation-1: '';
+	--elevation-2: '';
+	--elevation-3: '';
+	--elevation-4: '';
+	--elevation-5: '';
+
+	// Z-index
+	--z-modal: 10;
+
 }

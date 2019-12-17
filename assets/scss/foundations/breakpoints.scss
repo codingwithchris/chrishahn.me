@@ -1,0 +1,56 @@
+ $breakpoints_config:(
+
+	2xs		:	414px,
+	xs		:	560px,
+	s		: 	769px,
+	m		:	960px,
+	l		:	1040px,
+	xl		:	1200px,
+	2xl		:	1440px,
+	3xl		:	1640px
+
+);
+
+/**
+ * The breakpoint mixin takes only 1 parameter.
+ *
+ * @param $size The size to fetch from our breakpoints config file
+ */
+
+@mixin breakpoint( $size ) {
+
+	// If we declare "mobile only"
+	@if $size == mobile-only {
+
+	  /**
+		* Apply our defined styles at a max-width or "mobile-only"
+		* We are subtracting 1 from the `s` value returned from our config
+		* map so there is no usage conflict  or "overlap "if we also want
+		* to use the `s` size within a normal "min-width" media query.
+		*/
+	  @media (max-width: get_config( $breakpoints_config, s ) - 1) {
+
+		@content;
+
+	  }
+
+	}
+
+	//Handle Errors if no matching value found in our config map.
+	@if not map-has-key($breakpoints_config, $size) {
+
+	  @error "No value found for, `#{$size}` in the $breakpoints_config map. Available breakpoints are:"
+
+		"mobile-only,"+ " #{map-keys($breakpoints_config)}";
+
+	}
+
+	// By default...every breakpoint value uses "min-width",
+	// in keeping with a mobile-first approach.
+	@media (min-width: map_get( $breakpoints_config, $size ) ) {
+
+	  @content;
+
+	}
+
+  }
